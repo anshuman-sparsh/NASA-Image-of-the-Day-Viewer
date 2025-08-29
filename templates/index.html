@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA Picture of the Day</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>NASA's Astronomy Picture of the Day</h1>
+
+        <form method="POST" action="/" class="date-picker-form">
+            <label for="date">Select a Date:</label>
+            <input type="date" id="date" name="date" value="{{ data.date if data else date }}">
+            <button type="submit">View Picture</button>
+        </form>
+
+        {% if data %}
+            <h2>{{ data.title }}</h2>
+            <p class="date">{{ data.date }}</p>
+
+            {% if data.media_type == 'image' %}
+                <img src="{{ data.hdurl or data.url }}" alt="{{ data.title }}">
+            {% elif data.media_type == 'video' %}
+                <div class="video-container">
+                    <iframe src="{{ data.url }}" frameborder="0" allowfullscreen></iframe>
+                </div>
+            {% endif %}
+            
+            <p class="explanation">{{ data.explanation }}</p>
+        {% elif error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

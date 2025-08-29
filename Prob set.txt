@@ -1,0 +1,39 @@
+Topic: Python Flask Mini Project
+Subtopic: NASA's "Astronomy Picture of the Day" Viewer
+
+
+Today's Tasks:
+Your mission today is to build a web application that fetches and displays the daily space picture from NASA's public API.
+
+1. Project Setup & API Key:
+Set up a new Flask project. You'll need to install the requests library (pip install requests) to communicate with the API.
+Go to the NASA API website and get your own free API key. It's instant. Store this key safely (e.g., in a separate config file or as an environment variable).
+
+
+
+
+
+2. API Helper Function:
+In your Flask app, write a Python function that calls the NASA APOD (Astronomy Picture of the Day) API.
+This function should use the requests library to make a GET request to the endpoint, passing your API key as a parameter. It should handle the JSON response and return the data (title, explanation, image URL, etc.).
+
+
+
+
+3. Create the Main Route & Template:
+Build the main route (/) for your application.
+Inside this route, call your API helper function to get today's picture data.
+Pass this data to an index.html template. The template should display the image, its title, the date, and the detailed explanation.
+
+
+
+
+4. Add Basic Styling:
+Create a style.css file and link it to your template.
+Add some simple CSS to make the page look good. Center the content, give the image a max-width, and choose a clean, readable font for the text.
+
+
+
+5. Bonus Feature: View by Date:
+If you have extra time, add a date input field to your HTML page.
+When a user selects a date and submits the form, it should take them to a new page (or update the current one) showing the APOD for that specific date. This will require a new route (e.g., /apod/<date>) and modifying your API call to include the date parameter.

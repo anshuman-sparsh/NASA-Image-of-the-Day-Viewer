@@ -1,0 +1,91 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #0b3d91;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #002244;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    border-bottom: 2px solid #4a90e2;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    color: #e0e0e0;
+}
+
+.date-picker-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+
+input[type="date"], button {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #4a90e2;
+}
+
+button {
+    background-color: #4a90e2;
+    color: white;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    margin-top: 1rem;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.date {
+    font-style: italic;
+    color: #cccccc;
+}
+
+.explanation {
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.error {
+    color: #ff6b6b;
+    text-align: center;
+    font-size: 1.2rem;
+}
